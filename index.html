@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Compras - Empresa ABC</title>
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Compras - Empresa ABC</h1>
+        
+    </header>
+    <main>
+        <section id="requisition-section">
+            <h2>1. Registrar Requerimiento de Reposición</h2>
+            <div>
+                <label for="material">Material:</label>
+                <input type="text" id="material" placeholder="Ej. Tornillos">
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" placeholder="Ej. 100">
+                <button onclick="addRequisition()">Registrar</button>
+            </div>
+            <ul id="requisition-list"></ul>
+        </section>
+
+        <section id="purchase-order-section">
+            <h2>2. Generar Orden de Compra</h2>
+            <div>
+                <label for="supplier">Proveedor:</label>
+                <input type="text" id="supplier" placeholder="Ej. Proveedor XYZ">
+                <label for="delivery-date">Fecha de Entrega:</label>
+                <input type="date" id="delivery-date">
+                <button onclick="generatePurchaseOrder()">Generar Orden</button>
+            </div>
+            <ul id="purchase-order-list"></ul>
+        </section>
+
+        <section id="payment-section">
+            <h2>3. Registrar y Autorizar Pago</h2>
+            <div>
+                <label for="invoice-amount">Importe Factura:</label>
+                <input type="number" id="invoice-amount" placeholder="Ej. 5000">
+                <label for="payment-date">Fecha de Pago:</label>
+                <input type="date" id="payment-date">
+                <label for="payment-method">Método de Pago:</label>
+                <select id="payment-method">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Cheque">Cheque</option>
+                </select>
+                <button onclick="authorizePayment()">Autorizar Pago</button>
+            </div>
+            <ul id="payment-list"></ul>
+        </section>
+    </main>
+    <script src="./Js/index.js"></script>
+</body>
+</html>
+    
